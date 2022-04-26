@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+	
+		#body {
+		background-color: black;}
+
+		#wrap {
+			background-color: white; 
+			width:300px; 
+			height:93.0431px; 
+			margin-top: 50px;
+			margin-right: auto;
+			margin-left: auto;}
+
+		#header {
+			background-color: white;
+			width:300px; 
+			margin-right: auto;
+			margin-left: auto;}
+
+
+.backgroundd {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1000;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      .showd {
+        opacity: 1;
+        z-index: 1000;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+      }
+
+      .windowd {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .popupd {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 700px;
+        height: 350px;
+
+        /* 초기에 약간 아래에 배치 */
+        /*transform: translate(-50%, -40%);*/
+        
+      }
+
+      .showd .popupd {
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
+
+
+		.background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1000;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      .show {
+        opacity: 1;
+        z-index: 1000;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+      }
+
+      .window {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 700px;
+        height: 738px;
+
+        /* 초기에 약간 아래에 배치 */
+        /*transform: translate(-50%, -40%);*/
+        
+      }
+
+      .show .popup {
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
+
+
+
+
+      .background0 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1000;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      .show0 {
+        opacity: 1;
+        z-index: 1000;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+      }
+
+      .window0 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .popup0 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 630px;
+        height: 610px;
+
+        /* 초기에 약간 아래에 배치 */
+        /*transform: translate(-50%, -40%);*/
+        
+      }
+
+      .show0 .popup0 {
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
+
+
+
+      	
+
+
+
+      .background3 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1000;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      .show3 {
+        opacity: 1;
+        z-index: 1000;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+      }
+
+      .window3 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .popup3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 700px;
+        height: 400px;
+
+        /* 초기에 약간 아래에 배치 */
+        /*transform: translate(-50%, -40%);*/
+        
+      }
+
+      .show3 .popup3 {
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
+
+
+	</style>
+	<title>LAYER</title>
+</head>
+<body id="body">
+
+
+
+	<div id="wrap">
+		<div id="header">
+
+
+
+			<a function show= "fade" href="file:///Users/kimchaeyeon/Desktop/2022-1%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%B5/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%A8%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%89%E1%85%AD%E1%86%B8I/untitled%20folder/LAYER.html" >
+				<img style="display:block;" src="1200w/Asset 86.png" width="300px">
+			</a>
+
+			<img style="display:block;" src="1200w/Asset 87.png" width="300px" >
+
+
+
+			<center><button class="show">나의 연대기</button></center> 
+		    <div class="background">
+		      <div class="window">
+		        <div class="popup">
+		        	<button class="close">X</button>
+
+		        	<center><img style="display:block;" src="5000w/Asset 7.png" width="650px"></center> 
+		          
+		        </div>
+		      </div>
+		    </div>
+
+
+		    <script>
+		      function show() {
+		        document.querySelector(".background").className = "background show";
+		      }
+
+		      function close() {
+		        document.querySelector(".background").className = "background";
+		      }
+
+		      document.querySelector(".show").addEventListener("click", show);
+		      document.querySelector(".close").addEventListener("click", close);
+		    </script>
+
+
+		     <center><button class="show0">필드 레터링</button></center> 
+		    <div class="background0">
+		      <div class="window0">
+		        <div class="popup0">
+		        	<button class="close0">X</button>
+
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="300px" >
+		        	
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="450px" >
+		        	<center><img style="display:block;" src="5000w/Asset 8.png" width="380px"></center> 
+		          
+		        </div>
+		      </div>
+		    </div>
+
+
+		    <script>
+		      function show() {
+		        document.querySelector(".background0").className = "background0 show0";
+		      }
+
+		      function close() {
+		        document.querySelector(".background0").className = "background0";
+		      }
+
+		      document.querySelector(".show0").addEventListener("click", show);
+		      document.querySelector(".close0").addEventListener("click", close);
+		    </script>
+
+
+		    
+
+		   <center><button class="showd" >DNA</button></center> 
+		    <div class="backgroundd">
+		      <div class="windowd">
+		        <div class="popupd">
+		        	<button class="closed">X</button>
+
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="300px" >
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="100px" >
+		        	<center><img style="display:block;" src="1200w/Asset 4.png" width="600px"></center> 
+		          
+		        </div>
+		      </div>
+		    </div>
+
+
+		    <script>
+		      function show() {
+		        document.querySelector(".backgroundd").className = "backgroundd showd";
+		      }
+
+		      function close() {
+		        document.querySelector(".backgroundd").className = "backgroundd";
+		      }
+
+		      document.querySelector(".showd").addEventListener("click", show);
+		      document.querySelector(".closed").addEventListener("click", close);
+		    </script>
+
+		   
+
+		    <center><button class="show3" >문법</button></center> 
+		    <div class="background3">
+		      <div class="window3">
+		        <div class="popup3">
+		        	<button class="close3">X</button>
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="300px" >
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="300px" >
+		        	<img style="display:block;" src="1200w/Asset 8.png" width="20px" >
+
+
+
+		        	<center><img style="display:block;" src="1200w/Asset 7.png" width="600px"></center> 
+		          
+		        </div>
+		      </div>
+		    </div>
+
+
+		    <script>
+		      function show() {
+		        document.querySelector(".background3").className = "background3 show3";
+		      }
+
+		      function close() {
+		        document.querySelector(".background3").className = "background3";
+		      }
+
+		      document.querySelector(".show3").addEventListener("click", show);
+		      document.querySelector(".close3").addEventListener("click", close);
+		    </script>
+
+
+
+
+		    
+			
+			<img style="display:block;" src="1200w/Asset 8.png" width="300px">
+
+			<a function show= "fade" href="file:///Users/kimchaeyeon/Desktop/2022-1%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%B5/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%A8%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%89%E1%85%AD%E1%86%B8I/untitled%20folder/LAYER1.html" >
+				<img style="display:block;" src="1200w/Asset 88.png" width="300px">
+
+			</a>
+			<a data-transition="fade" href="file:///Users/kimchaeyeon/Desktop/2022-1%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%B5/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%A8%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%89%E1%85%AD%E1%86%B8I/untitled%20folder/LAYER2.html" >
+				<img style="display:block;" src="1200w/Asset 89.png" width="300px">
+			</a>
+
+			<a data-transition="fade" href="file:///Users/kimchaeyeon/Desktop/2022-1%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%B5/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%A8%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%89%E1%85%AD%E1%86%B8I/untitled%20folder/LAYER3.html" >	
+				<img style="display:block;" src="1200w/Asset 90.png" width="300px">
+			</a>
+
+			
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
+
